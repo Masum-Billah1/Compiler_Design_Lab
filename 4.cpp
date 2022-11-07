@@ -11,7 +11,7 @@ int main(){
     if(s[0]>='i'&& s[0]<='n'||s[0]>='I'&& s[0]<='N')
         integer = 1;
     for(i=1;i<s.size();i++){
-        if(s[i]>'a' && s[i]<'z' || s[i]>'A'&&s[i]<'Z'||s[i]>'0'&&s[i]<'9')
+        if(s[i]<'a' && s[i]>'z' || s[i]<'A'&&s[i]>'Z'||s[i]<'0'&&s[i]>'9')//Out of range
             integer = 0;
     }
     for(i=0;i<s.size();i++){
