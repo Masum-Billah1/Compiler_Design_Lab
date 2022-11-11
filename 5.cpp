@@ -18,8 +18,11 @@ int main(){
 			floatnum = doublenum = 1;
 			floatposition = i;
 		}
-	if(floatposition==1 && s[0]!='0')
+	//cout <<"check : "<< floatnum<<endl;
+	
+	if(floatposition<=1 && s[0]=='0')
 		floatnum = doublenum = 0;
+			
 	if(floatposition!=1){
 		if(s[0]<'1'&&s[0]>'9')
 			floatnum = doublenum = 0;
@@ -28,6 +31,7 @@ int main(){
 				floatnum = doublenum = 0;
 		}
 	}
+	
 	for(i=floatposition+1;i<s.size();i++){
 		if(isdigit(s[i]))
 			floatingnumber++;
