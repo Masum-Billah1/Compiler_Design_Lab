@@ -20,7 +20,7 @@ int main(){
 		}
 	//cout <<"check : "<< floatnum<<endl;
 	
-	if(floatposition<=1 && s[0]=='0')
+	if(floatposition!=1 && s[0]=='0')
 		floatnum = doublenum = 0;
 			
 	if(floatposition!=1){
