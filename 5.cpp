@@ -24,8 +24,6 @@ int main(){
 		floatnum = doublenum = 0;
 			
 	if(floatposition!=1){
-		if(s[0]<'1'&&s[0]>'9')
-			floatnum = doublenum = 0;
 		for(i=1;i<floatposition;i++){
 			if(!isdigit(s[i]))
 				floatnum = doublenum = 0;
@@ -40,6 +38,8 @@ int main(){
 	}
 	if(floatingnumber<2)
 		floatnum = doublenum = 0;
+		
+		
 	else if(floatingnumber>2)
 		floatnum = 0;
 	
