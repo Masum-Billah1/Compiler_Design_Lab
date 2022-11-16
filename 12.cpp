@@ -38,8 +38,9 @@ int main(){
 			
 		else if(str[i]==')' && isdigit(str[i+1]))
 			valid = 0;	
-			
-		else if(str[i]='('){
+	}
+	for(i=0;i<str.size();i++){
+		if(str[i]='('){
 			stk.push('(');
 		}
 		else if(str[i]=')'){
@@ -47,8 +48,9 @@ int main(){
 				valid = 0;
 			stk.pop();
 		}
-	
 	}
+	if(!stk.empty())
+		valid = 0;
 	if(valid == 1)
 		cout <<"VALID"<<endl;
 	else
