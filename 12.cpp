@@ -21,9 +21,6 @@ int main(){
 		else if(isdigit(str[i]) && str[i+1]=='(')
 			valid = 0;
 		
-		else if(str[i]=='(' && str[i+1]=='(')
-			valid = 0;	
-		
 		else if(str[i]=='(' && str[i]=='*')
 			valid = 0;
 			
@@ -40,10 +37,11 @@ int main(){
 			valid = 0;	
 	}
 	for(i=0;i<str.size();i++){
-		if(str[i]='('){
+		if(str[i]=='('){
 			stk.push('(');
+			
 		}
-		else if(str[i]=')'){
+		else if(str[i]==')'){
 			if(stk.empty())
 				valid = 0;
 			stk.pop();
@@ -51,6 +49,7 @@ int main(){
 	}
 	if(!stk.empty())
 		valid = 0;
+	
 	if(valid == 1)
 		cout <<"VALID"<<endl;
 	else
